@@ -15,7 +15,7 @@ export function Testimonial({ name, role, content, image }: { name: any; role: a
   )
 }
 
-export function FAQ({ question, answer }) {
+export function FAQ({ question, answer }: { question: any; answer: any; }) {
   return (
     <div className="mb-6">
       <h3 className="text-xl font-semibold mb-2">{question}</h3>
@@ -24,13 +24,13 @@ export function FAQ({ question, answer }) {
   )
 }
 
-export function PricingTier({ name, price, features }) {
+export function PricingTier({ name, price, features }: { name: any; price: any; features: any; }) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <h3 className="text-2xl font-bold mb-4">{name}</h3>
       <p className="text-4xl font-bold mb-6">${price}</p>
       <ul className="space-y-2 mb-6">
-        {features.map((feature, index) => (
+        {features.map((feature: string, index: number) => (
           <li key={index} className="flex items-center">
             <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
